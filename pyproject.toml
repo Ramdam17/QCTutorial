@@ -17,6 +17,7 @@ seaborn = "^0.13.0"
 numpy = "^1.26.0"
 jupyter = "^1.0.0"
 ipykernel = "^6.27.0"
+pylatexenc = "^2.10"
 
 [tool.poetry.group.dev.dependencies]
 black = "^23.12.0"
