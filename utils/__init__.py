@@ -1,26 +1,24 @@
 """
-Quantum Computing Workshop Utilities
+Utility functions for the Quantum Computing Tutorial.
 
-This package provides utility functions for the quantum computing workshop,
-including beautiful visualizations and hardware backend configuration.
+This package provides beautiful visualizations and helper functions
+for the workshop notebooks.
 """
 
 from .plotting import (
-    configure_beautiful_plots,
-    plot_histogram_comparison,
-    plot_bloch_sphere,
-    plot_circuit,
-    plot_correlation_matrix,
-    plot_statevector,
     COLORS,
+    configure_beautiful_plots,
+    plot_measurement_histogram,
+    plot_statevector,
+    plot_comparison,
+    add_progress_bar,
 )
 
 __all__ = [
-    "configure_beautiful_plots",
-    "plot_histogram_comparison",
-    "plot_bloch_sphere",
-    "plot_circuit",
-    "plot_correlation_matrix",
-    "plot_statevector",
-    "COLORS",
+    'COLORS',
+    'configure_beautiful_plots',
+    'plot_measurement_histogram',
+    'plot_statevector',
+    'plot_comparison',
+    'add_progress_bar',
 ]

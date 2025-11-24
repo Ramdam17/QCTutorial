@@ -1,48 +1,87 @@
 # Quantum Computing Workshop 🦄✨
+## From Zero to Quantum Hero
 
-A lightning-fast introduction to quantum computing fundamentals through beautiful visualizations and hands-on demonstrations.
+A comprehensive introduction to quantum computing fundamentals through beautiful visualizations, progressive exercises, and hands-on demonstrations.
 
 ## 🎯 Overview
 
-This workshop consists of 4 Jupyter notebooks, each designed to run in approximately 10 minutes. Through clear explanations and stunning visualizations, you'll learn the core concepts that make quantum computing powerful.
+This workshop consists of 7 Jupyter notebooks, each designed to run in 12-20 minutes. Through clear explanations, stunning visualizations, checkpoints, and interactive quizzes, you'll build a solid intuition of fundamental quantum concepts.
 
-**Target Audience**: Experienced Python developers interested in quantum computing  
-**Prerequisites**: Basic Python knowledge, no prior quantum mechanics required  
-**Total Duration**: ~40 minutes (10 minutes per notebook)
+**Target Audience**: Anyone with basic Python knowledge - no quantum background required!  
+**Prerequisites**: Basic Python knowledge, no prior quantum mechanics or physics required  
+**Total Duration**: ~100 minutes (1h40 with breaks)  
+**Pedagogical Approach**: 4-part structure (Intuition → Concept → Implementation → Visualization)
 
 ## 📚 Notebooks
 
-### 1. Superposition (`01_superposition.ipynb`)
+| # | Title | Duration | Difficulty | Key Concepts |
+|---|-------|----------|------------|-------------|
+| 0 | My First Qubit | 12 min | ⭐ | Circuit, X gate, Measurement, Bloch sphere |
+| 1 | Superposition | 12 min | ⭐ | Hadamard, Probabilities, H·H = I |
+| 2 | Rotations & Interference | 20 min | ⭐⭐ | Pauli gates, RX/RY/RZ, Phase, H-Z-H |
+| 3 | Two Qubits & CNOT | 15 min | ⭐⭐ | CNOT, Bell states, Correlations |
+| 4 | Entanglement | 15 min | ⭐⭐⭐ | Quantum correlations, CHSH inequality |
+| 5 | Deutsch's Algorithm | 12 min | ⭐⭐ | Oracle, Quantum advantage, First algorithm |
+| 6 | Teleportation | 15 min | ⭐⭐⭐ | Complete protocol, No-cloning, Fidelity |
+
+### 0. My First Qubit (`00_first_qubit.ipynb`) ⭐
+Demystify quantum computing and manipulate your first qubit.
+- Create a quantum circuit
+- Apply the X gate (quantum NOT)
+- Measure and interpret results
+- Visualize on the Bloch sphere
+
+**Key Concept**: Quantum circuits are like programs with qubits, gates, and measurements.
+
+### 1. Superposition (`01_superposition.ipynb`) ⭐
 Explore the fundamental difference between classical probability and quantum superposition.
-- Classical coin flips vs quantum superposition
-- Hadamard gate and state preparation
-- Bloch sphere visualization
-- First quantum circuit
+- Classical random bits vs quantum superposition
+- The Hadamard gate: creating (|0⟩+|1⟩)/√2
+- The "spinning coin" analogy
+- Understanding measurement collapse
 
-**Key Concept**: A qubit can exist in multiple states simultaneously until measured.
+**Key Concept**: A qubit can exist in multiple states simultaneously (0 AND 1), not just be unknown.
 
-### 2. Interference (`02_interference.ipynb`)
-Discover how quantum amplitudes interfere to solve computational problems.
-- Classical wave interference vs quantum amplitude interference
-- Negative amplitudes in quantum mechanics
-- The Deutsch algorithm (first quantum algorithm)
-- Quantum advantage demonstration
+### 2. Rotations & Interference (`02_rotations_interference.ipynb`) ⭐⭐
+Master quantum gates as rotations and understand interference.
+- Pauli gates (X, Y, Z) as 180° rotations
+- Arbitrary rotations (RX, RY, RZ) with any angle
+- The concept of phase (negative amplitudes)
+- Interference: H-H cancellation, H-Z-H to |1⟩
 
-**Key Concept**: Quantum amplitudes can interfere constructively or destructively, enabling new computational approaches.
+**Key Concept**: Gates rotate qubits on the Bloch sphere; amplitudes interfere constructively/destructively.
 
-### 3. Entanglement (`03_entanglement.ipynb`)
+### 3. Two Qubits & CNOT (`03_two_qubits_cnot.ipynb`) ⭐⭐
+Work with multiple qubits and create quantum correlations.
+- 2-qubit systems: 4 basis states |00⟩, |01⟩, |10⟩, |11⟩
+- The CNOT gate (Controlled-NOT)
+- Creating the 4 Bell states
+- First quantum correlations
+
+**Key Concept**: CNOT creates correlations between qubits that are the foundation of entanglement.
+
+### 4. Entanglement (`04_entanglement.ipynb`) ⭐⭐⭐
 Understand quantum correlations that Einstein called "spooky action at a distance."
 - Classical correlations vs quantum entanglement
-- Bell states creation and measurement
-- Correlation analysis and visualization
-- All four maximally entangled states
+- Measuring correlations in different bases
+- CHSH inequality violation
+- Why entanglement is non-classical
 
-**Key Concept**: Entangled qubits share correlations that cannot be explained by classical physics.
+**Key Concept**: Entangled qubits have correlations stronger than any classical system can achieve.
 
-### 4. Teleportation (`04_teleportation.ipynb`)
-See how quantum information can be transferred without physically moving the qubit.
-- No-cloning theorem
-- Complete quantum teleportation protocol
+### 5. Deutsch's Algorithm (`05_deutsch_algorithm.ipynb`) ⭐⭐
+Implement your first quantum algorithm and see quantum advantage.
+- The oracle concept (black box function)
+- Deutsch's problem: constant vs balanced
+- Quantum solution with 1 query (vs 2 classical)
+- How interference gives the answer
+
+**Key Concept**: Quantum interference can solve certain problems with exponentially fewer queries.
+
+### 6. Teleportation (`06_teleportation.ipynb`) ⭐⭐⭐
+See the complete quantum teleportation protocol in action.
+- The no-cloning theorem
+- Complete teleportation protocol (Bell state + measurements)
 - Step-by-step state evolution
 - Fidelity analysis across random states
 
@@ -89,14 +128,33 @@ See how quantum information can be transferred without physically moving the qub
 
 ## 📊 What Makes This Workshop Special
 
-### Beautiful Visualizations
-Every concept is illustrated with high-quality, colorful plots designed to make quantum mechanics intuitive and engaging.
+### 🎨 Beautiful Visualizations
+Every concept is illustrated with high-quality, colorful plots (🦄✨ sparkly/unicorn theme) designed to make quantum mechanics intuitive and engaging.
 
-### Show, Don't Tell
-Minimal code, maximum impact. See quantum phenomena in action rather than reading about abstract theory.
+### 📚 Progressive Structure
+Each notebook follows a strict 4-part structure:
+1. 🤔 **Intuition**: Classical analogy or conceptual diagram
+2. 💡 **Concept**: Progressive explanation of quantum concept
+3. 💻 **Implementation**: Step-by-step commented code
+4. 📊 **Visualization**: Interpreted results
 
-### Progressive Learning
-Each notebook builds on previous concepts, creating a coherent narrative from basic superposition to quantum teleportation.
+### ✅ Regular Checkpoints
+Verify your understanding with checkpoint lists throughout each notebook.
+
+### 🎯 Interactive Exercises
+Three difficulty levels:
+- 🟢 **Level 1**: Predict the result
+- 🟡 **Level 2**: Modify a parameter
+- 🔴 **Level 3**: Create from scratch
+
+### 🧠 End-of-Notebook Quizzes
+Test your understanding with quick quizzes (answers provided).
+
+### 📈 Visual Progress Tracking
+See your progress through the workshop with ⬛⬛⬛⬜⬜⬜⬜ progress bars.
+
+### 🎓 Complete Beginner Friendly
+No prior quantum mechanics or physics knowledge required. Start from absolute zero!
 
 ### Real Hardware Ready
 Includes placeholder configuration for running circuits on Compute Canada's Monarch quantum computer (requires separate setup).
@@ -104,28 +162,37 @@ Includes placeholder configuration for running circuits on Compute Canada's Mona
 ## 🌟 Learning Path
 
 ```
-Superposition → Interference → Entanglement → Teleportation
-     ↓              ↓               ↓              ↓
-  Foundation   Quantum Algo    Correlations   Full Protocol
+First Qubit → Superposition → Rotations → Two Qubits → Entanglement → Deutsch → Teleportation
+     ↓             ↓              ↓            ↓             ↓            ↓           ↓
+  Basics      Foundation    Interference    CNOT Gate   Correlations  Algorithm   Protocol
+   (⭐)          (⭐)          (⭐⭐)          (⭐⭐)        (⭐⭐⭐)       (⭐⭐)      (⭐⭐⭐)
 ```
+
+**Progress tracking**: Each notebook shows your progress with ⬛⬛⬛⬜⬜⬜⬜ bars
 
 ## 📁 Project Structure
 
 ```
-quantum-workshop/
-├── README.md                         # This file
-├── pyproject.toml                    # Poetry dependencies
-├── copilot-instructions.md           # Development guidelines
-├── todo.md                           # Project roadmap
+QCTutorial/
+├── README.md                              # This file
+├── NOTEBOOK_WRITING_PLAN_EN.md            # Detailed pedagogical structure
+├── pyproject.toml                         # Poetry dependencies
+├── .github/
+│   └── copilot-instructions.md            # Development guidelines
 ├── notebooks/
-│   ├── 01_superposition.ipynb       # Notebook 1: Superposition
-│   ├── 02_interference.ipynb        # Notebook 2: Interference
-│   ├── 03_entanglement.ipynb        # Notebook 3: Entanglement
-│   └── 04_teleportation.ipynb       # Notebook 4: Teleportation
+│   ├── 00_first_qubit.ipynb              # Notebook 0: My First Qubit
+│   ├── 01_superposition.ipynb            # Notebook 1: Superposition
+│   ├── 02_rotations_interference.ipynb   # Notebook 2: Rotations & Interference
+│   ├── 03_two_qubits_cnot.ipynb          # Notebook 3: Two Qubits & CNOT
+│   ├── 04_entanglement.ipynb             # Notebook 4: Entanglement
+│   ├── 05_deutsch_algorithm.ipynb        # Notebook 5: Deutsch's Algorithm
+│   ├── 06_teleportation.ipynb            # Notebook 6: Teleportation
+│   └── legacy/                            # Previous version (4 notebooks)
 └── utils/
     ├── __init__.py
-    ├── plotting.py                  # Beautiful visualization utilities
-    └── monarch_config.py            # Quantum hardware configuration
+    ├── plotting.py                        # Beautiful visualization utilities
+    ├── monarch_config.py                  # Quantum hardware configuration
+    └── legacy/                            # Previous version utilities
 ```
 
 ## 🔬 Hardware Execution (Optional)
@@ -175,12 +242,17 @@ MIT License - Feel free to use this workshop for learning and teaching.
 
 ## ⚡ Quick Tips
 
-1. **Run cells sequentially**: Each notebook is designed to be run from top to bottom
-2. **Take your time**: Even though each notebook is ~10 minutes, feel free to explore and experiment
-3. **Modify and experiment**: Change parameters, try different gates, see what happens!
-4. **Visual learner?**: Focus on the plots - they tell the story
-5. **Math curious?**: Read the equations and explanations for deeper understanding
+1. **Start from Notebook 0**: Begin with `00_first_qubit.ipynb` - even if you have some quantum knowledge
+2. **Run cells sequentially**: Each notebook is designed to be run from top to bottom
+3. **Use checkpoints**: Verify your understanding at each 🎯 CHECKPOINT before continuing
+4. **Try exercises**: Do the 🟢 exercises at minimum, challenge yourself with 🟡 and 🔴
+5. **Take quizzes**: Test yourself with end-of-notebook quizzes
+6. **Take your time**: Estimated times are guidelines - explore at your own pace!
+7. **Modify and experiment**: Change parameters, try different gates, see what happens!
+8. **Visual learner?**: Focus on the plots - they tell the story
+9. **Math curious?**: Read the equations and explanations for deeper understanding
+10. **Track progress**: Watch your ⬛⬛⬛⬜⬜⬜⬜ progress bar fill up!
 
 ---
 
-**Ready to explore the quantum world?** Start with `notebooks/01_superposition.ipynb` and enjoy the journey! 🚀✨
+**Ready to explore the quantum world?** Start with `notebooks/00_first_qubit.ipynb` and enjoy the journey from zero to quantum hero! 🚀✨
