@@ -175,7 +175,6 @@ First Qubit → Superposition → Rotations → Two Qubits → Entanglement → 
 ```
 QCTutorial/
 ├── README.md                              # This file
-├── NOTEBOOK_WRITING_PLAN_EN.md            # Detailed pedagogical structure
 ├── pyproject.toml                         # Poetry dependencies
 ├── .github/
 │   └── copilot-instructions.md            # Development guidelines
@@ -186,13 +185,10 @@ QCTutorial/
 │   ├── 03_two_qubits_cnot.ipynb          # Notebook 3: Two Qubits & CNOT
 │   ├── 04_entanglement.ipynb             # Notebook 4: Entanglement
 │   ├── 05_deutsch_algorithm.ipynb        # Notebook 5: Deutsch's Algorithm
-│   ├── 06_teleportation.ipynb            # Notebook 6: Teleportation
-│   └── legacy/                            # Previous version (4 notebooks)
+│   └── 06_teleportation.ipynb            # Notebook 6: Teleportation
 └── utils/
-    ├── __init__.py
-    ├── plotting.py                        # Beautiful visualization utilities
-    ├── monarch_config.py                  # Quantum hardware configuration
-    └── legacy/                            # Previous version utilities
+    ├── __init__.py                        # Package initialization
+    └── plotting.py                        # Beautiful visualization utilities
 ```
 
 ## 🔬 Hardware Execution (Optional)
@@ -233,12 +229,6 @@ This is an educational project. Feedback, suggestions, and improvements are welc
 ## 📄 License
 
 MIT License - Feel free to use this workshop for learning and teaching.
-
-## 🙏 Acknowledgments
-
-- **IBM Qiskit Team** for the excellent quantum computing framework
-- **Compute Canada** for quantum hardware access (Monarch)
-- The quantum computing community for educational resources
 
 ## ⚡ Quick Tips
 
