@@ -98,7 +98,7 @@ See the complete quantum teleportation protocol in action.
 
 1. **Clone the repository**
    ```bash
-   git clone <your-gitlab-url>
+   git clone https://github.com/Ramdam17/QCTutorial
    cd QCTutorial
    ```
 
