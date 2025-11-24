@@ -2,18 +2,21 @@
 
 ## Project Overview
 
-This project contains 4 Jupyter notebooks for a lightning-fast introduction to quantum computing fundamentals. Each notebook is designed to run in ~10 minutes and demonstrates core concepts through beautiful visualizations.
+This project contains 7 Jupyter notebooks for a comprehensive introduction to quantum computing fundamentals. Each notebook is designed to run in 12-20 minutes and demonstrates core concepts through beautiful visualizations and progressive exercises.
 
-**Target audience**: Experienced Python developers familiar with computational neuroscience
-**Duration**: 10 minutes per notebook
-**Style**: Show, don't tell - minimal code, maximum visualization
+**Target audience**: Team with no quantum computing background
+**Total Duration**: ~100 minutes (1h40 with breaks)
+**Style**: 4-part structure - Intuition → Concept → Implementation → Visualization
 
 ## Core Concepts Covered
 
+0. **My First Qubit** - Circuit creation, X gate, measurement basics
 1. **Superposition** - Classical probability vs quantum superposition
-2. **Interference** - Amplitude interference and the Deutsch algorithm
-3. **Entanglement** - Bell states and quantum correlations
-4. **Teleportation** - Complete quantum state transfer protocol
+2. **Rotations & Interference** - Pauli gates, arbitrary rotations, phase, interference
+3. **Two Qubits & CNOT** - Multi-qubit systems, CNOT gate, Bell states
+4. **Entanglement** - Quantum correlations, CHSH inequality
+5. **Deutsch's Algorithm** - First quantum algorithm, quantum advantage
+6. **Teleportation** - Complete quantum state transfer protocol
 
 ## Technical Stack
 
@@ -28,19 +31,25 @@ This project contains 4 Jupyter notebooks for a lightning-fast introduction to q
 
 ```
 quantum-workshop/
-├── copilot-instructions.md          # This file
-├── todo.md                           # Detailed task breakdown
+├── .github/
+│   └── copilot-instructions.md      # This file
+├── NOTEBOOK_WRITING_PLAN_EN.md      # Detailed pedagogical structure
 ├── pyproject.toml                    # Poetry dependencies
 ├── README.md                         # Project overview
 ├── notebooks/
+│   ├── 00_first_qubit.ipynb
 │   ├── 01_superposition.ipynb
-│   ├── 02_interference.ipynb
-│   ├── 03_entanglement.ipynb
-│   └── 04_teleportation.ipynb
+│   ├── 02_rotations_interference.ipynb
+│   ├── 03_two_qubits_cnot.ipynb
+│   ├── 04_entanglement.ipynb
+│   ├── 05_deutsch_algorithm.ipynb
+│   ├── 06_teleportation.ipynb
+│   └── legacy/                       # Previous version notebooks
 ├── utils/
 │   ├── __init__.py
 │   ├── monarch_config.py            # Compute Canada configuration
-│   └── plotting.py                  # Shared beautiful plotting functions
+│   ├── plotting.py                  # Shared beautiful plotting functions
+│   └── legacy/                       # Previous version utilities
 └── .gitignore
 ```
 
@@ -104,20 +113,25 @@ def create_bell_state(circuit: QuantumCircuit, qubits: list[int]) -> None:
 
 ### Jupyter Notebook Structure
 
-Each notebook follows this pattern:
+Each notebook follows this strict 4-part pattern:
 
 ```
-Cell 1:  [Markdown] General introduction
+Cell 1:  [Markdown] Header with progress bar, duration, learning objectives
 Cell 2:  [Code] Imports & setup
 
---- Repeating pattern ---
-Cell N:   [Markdown] What we'll do, why, how, expected results
-Cell N+1: [Code] Implementation
-Cell N+2: [Code] More implementation (if needed)
-Cell N+3: [Markdown] Explanation, rationale, interpretation of results
+--- Repeating pattern (4-part structure) ---
+Section Start: [Markdown] 🤔 INTUITION - Classical analogy or conceptual diagram
+Cell N:        [Markdown] 💡 CONCEPT - Progressive explanation of quantum concept
+Cell N+1:      [Code] 💻 IMPLEMENTATION - Step-by-step commented code
+Cell N+2:      [Markdown] 📊 VISUALIZATION - Interpreted results
 --- End pattern ---
 
-Final cells: Monarch hardware execution
+Checkpoints:   [Code] Regular checkpoints with □ checklists
+Exercises:     [Markdown] 3 levels - 🟢 Predict, 🟡 Modify, 🔴 Create
+Quiz:          [Markdown] End-of-notebook quiz with correct answers marked
+Summary:       [Markdown] Progress bar, next notebook teaser
+
+Optional:      Monarch hardware execution
 ```
 
 ### Markdown Cell Guidelines
@@ -130,7 +144,62 @@ Each explanatory markdown cell should include:
 4. **Expected**: What results we anticipate
 5. **Equations**: Use LaTeX for math (inline `$...$` or display `$$...$$`)
 
-Example:
+**Required Elements for Each Notebook:**
+
+**Header format:**
+```markdown
+# Notebook X: Title
+
+📘 **Notebook X/7**: Title  
+⏱️  **Estimated Duration**: XX min  
+🎯 **What You'll Learn**:
+   • Concept 1
+   • Concept 2
+   • Concept 3
+
+**Progress**: ⬛⬛⬛⬜⬜⬜⬜ (X/7)
+```
+
+**Checkpoint format:**
+```python
+# 🎯 CHECKPOINT: Can you...
+# □ Action 1?
+# □ Action 2?
+# □ Action 3?
+```
+
+**Exercise format:**
+```markdown
+## 🎯 Exercise: Title
+
+**Question**: ...
+
+🤔 **Predict the result**:
+- [ ] Option A
+- [ ] Option B
+- [ ] Option C
+
+<details>
+<summary>👉 Click for the answer</summary>
+
+**Answer**: ...
+
+**Explanation**: ...
+
+</details>
+```
+
+**Quiz format:**
+```markdown
+## 🎯 Quick Quiz
+
+**1. Question?**
+- [ ] Wrong answer
+- [x] Correct answer
+- [ ] Wrong answer
+```
+
+Example section:
 ```markdown
 ## Creating Quantum Superposition
 
@@ -372,21 +441,28 @@ No formal unit tests needed for workshop notebooks.
 
 ## Tips for Copilot
 
-1. **Think pedagogically**: These are teaching materials, not production code
-2. **Prioritize clarity**: A developer should understand quantum concepts from the code
+1. **Think pedagogically**: These are teaching materials for complete beginners
+2. **Prioritize clarity**: Someone with no quantum background should understand from the code
 3. **Make it beautiful**: Visualizations are as important as correct results
-4. **Stay focused**: 10 minutes means essential content only
-5. **Ask questions**: If unsure about a design choice, ask the user
-6. **Reference theory**: Include equations and explanations
-7. **Compare classical**: Always show classical analog first
+4. **Follow the 4-part structure**: Intuition → Concept → Implementation → Visualization
+5. **Include checkpoints**: Regular verification points with checkbox lists
+6. **Progressive exercises**: 🟢 Predict → 🟡 Modify → 🔴 Create from scratch
+7. **Add quizzes**: End each notebook with a quick quiz (mark correct answers)
+8. **Ask questions**: If unsure about a design choice, ask the user
+9. **Reference theory**: Include equations and explanations
+10. **Compare classical**: Always show classical analog first
+11. **Show progress**: Use progress bars (⬛⬛⬛⬜⬜⬜⬜) consistently
 
 ## Additional Notes
 
-- **No exercises**: Pure demonstration and explanation
+- **Progressive exercises**: Each notebook includes 3-level exercises (predict, modify, create)
+- **Interactive quizzes**: End-of-notebook quizzes to verify understanding
+- **Checkpoints**: Regular verification points throughout notebooks
 - **No neuroscience parallels**: Keep focus on quantum concepts
-- **Linear progression**: Each notebook builds on previous ones
+- **Linear progression**: Each notebook builds on previous ones (0→1→2→3→4→5→6)
 - **Reproducible**: Set random seeds where applicable
 - **Accessible**: Assume no prior quantum mechanics knowledge
+- **Detailed plan**: Follow NOTEBOOK_WRITING_PLAN_EN.md for exact structure
 
 ## Questions to Ask User
 
