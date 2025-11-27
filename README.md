@@ -21,7 +21,7 @@ This workshop consists of 7 Jupyter notebooks, each designed to run in 12-20 min
 | 2 | Rotations & Interference | 20 min | ⭐⭐ | Pauli gates, RX/RY/RZ, Phase, H-Z-H |
 | 3 | Two Qubits & CNOT | 15 min | ⭐⭐ | CNOT, Bell states, Correlations |
 | 4 | Entanglement | 15 min | ⭐⭐⭐ | Quantum correlations, CHSH inequality |
-| 5 | Deutsch's Algorithm | 12 min | ⭐⭐ | Oracle, Quantum advantage, First algorithm |
+| 5 | Deutsch's Algorithm | 18 min | ⭐⭐ | Oracle, Quantum advantage, First algorithm |
 | 6 | Teleportation | 15 min | ⭐⭐⭐ | Complete protocol, No-cloning, Fidelity |
 
 ### 0. My First Qubit (`00_first_qubit.ipynb`) ⭐
@@ -117,7 +117,7 @@ See the complete quantum teleportation protocol in action.
    jupyter notebook
    ```
 
-5. **Open the first notebook** (`notebooks/01_superposition.ipynb`) and start learning!
+5. **Open the first notebook** (`notebooks/00_first_qubit.ipynb`) and start learning!
 
 ## 🛠️ Technology Stack
 
@@ -156,9 +156,6 @@ See your progress through the workshop with ⬛⬛⬛⬜⬜⬜⬜ progress bars.
 ### 🎓 Complete Beginner Friendly
 No prior quantum mechanics or physics knowledge required. Start from absolute zero!
 
-### Real Hardware Ready
-Includes placeholder configuration for running circuits on Compute Canada's Monarch quantum computer (requires separate setup).
-
 ## 🌟 Learning Path
 
 ```
@@ -176,8 +173,6 @@ First Qubit → Superposition → Rotations → Two Qubits → Entanglement → 
 QCTutorial/
 ├── README.md                              # This file
 ├── pyproject.toml                         # Poetry dependencies
-├── .github/
-│   └── copilot-instructions.md            # Development guidelines
 ├── notebooks/
 │   ├── 00_first_qubit.ipynb              # Notebook 0: My First Qubit
 │   ├── 01_superposition.ipynb            # Notebook 1: Superposition
@@ -190,16 +185,6 @@ QCTutorial/
     ├── __init__.py                        # Package initialization
     └── plotting.py                        # Beautiful visualization utilities
 ```
-
-## 🔬 Hardware Execution (Optional)
-
-The notebooks include placeholder cells for executing circuits on real quantum hardware via Compute Canada's Monarch quantum computer. This requires:
-
-1. Compute Canada account with quantum computing access
-2. IBM Quantum credentials
-3. Configuration of `utils/monarch_config.py` with your credentials
-
-**Note**: All notebooks work perfectly with the included quantum simulator. Hardware execution is optional and demonstrates the difference between ideal simulation and noisy real-world quantum computers.
 
 ## 🎨 Visualization Theme
 

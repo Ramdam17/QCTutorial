@@ -78,3 +78,6 @@ qiskit.log
 data/raw/
 *.hdf5
 *.h5
+
+# GitHub Copilot instructions (private)
+.github/
