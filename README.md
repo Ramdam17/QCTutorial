@@ -107,14 +107,9 @@ See the complete quantum teleportation protocol in action.
    poetry install
    ```
 
-3. **Activate the virtual environment**
+3. **Launch Jupyter**
    ```bash
-   poetry shell
-   ```
-
-4. **Launch Jupyter**
-   ```bash
-   jupyter notebook
+   poetry run jupyter notebook
    ```
 
 5. **Open the first notebook** (`notebooks/00_first_qubit.ipynb`) and start learning!
@@ -126,36 +121,6 @@ See the complete quantum teleportation protocol in action.
 - **Numerical Computing**: NumPy
 - **Development**: Poetry for dependency management, Black & Ruff for code quality
 
-## 📊 What Makes This Workshop Special
-
-### 🎨 Beautiful Visualizations
-Every concept is illustrated with high-quality, colorful plots (🦄✨ sparkly/unicorn theme) designed to make quantum mechanics intuitive and engaging.
-
-### 📚 Progressive Structure
-Each notebook follows a strict 4-part structure:
-1. 🤔 **Intuition**: Classical analogy or conceptual diagram
-2. 💡 **Concept**: Progressive explanation of quantum concept
-3. 💻 **Implementation**: Step-by-step commented code
-4. 📊 **Visualization**: Interpreted results
-
-### ✅ Regular Checkpoints
-Verify your understanding with checkpoint lists throughout each notebook.
-
-### 🎯 Interactive Exercises
-Three difficulty levels:
-- 🟢 **Level 1**: Predict the result
-- 🟡 **Level 2**: Modify a parameter
-- 🔴 **Level 3**: Create from scratch
-
-### 🧠 End-of-Notebook Quizzes
-Test your understanding with quick quizzes (answers provided).
-
-### 📈 Visual Progress Tracking
-See your progress through the workshop with ⬛⬛⬛⬜⬜⬜⬜ progress bars.
-
-### 🎓 Complete Beginner Friendly
-No prior quantum mechanics or physics knowledge required. Start from absolute zero!
-
 ## 🌟 Learning Path
 
 ```
@@ -164,8 +129,6 @@ First Qubit → Superposition → Rotations → Two Qubits → Entanglement → 
   Basics      Foundation    Interference    CNOT Gate   Correlations  Algorithm   Protocol
    (⭐)          (⭐)          (⭐⭐)          (⭐⭐)        (⭐⭐⭐)       (⭐⭐)      (⭐⭐⭐)
 ```
-
-**Progress tracking**: Each notebook shows your progress with ⬛⬛⬛⬜⬜⬜⬜ bars
 
 ## 📁 Project Structure
 
@@ -186,17 +149,6 @@ QCTutorial/
     └── plotting.py                        # Beautiful visualization utilities
 ```
 
-## 🎨 Visualization Theme
-
-All plots use a custom "sparkly/unicorn" color palette 🦄✨:
-- **Hot Pink** (#FF69B4) - Primary quantum states
-- **Medium Purple** (#9370DB) - Secondary states
-- **Dark Turquoise** (#00CED1) - Accent colors
-- **Gold** (#FFD700) - Highlights
-- **Blue Violet** (#8A2BE2) - Quantum operations
-
-High DPI (150+), clean styling, and careful annotations ensure every visualization is publication-quality.
-
 ## 📖 Additional Resources
 
 After completing this workshop, continue your quantum journey with:
@@ -214,20 +166,3 @@ This is an educational project. Feedback, suggestions, and improvements are welc
 ## 📄 License
 
 MIT License - Feel free to use this workshop for learning and teaching.
-
-## ⚡ Quick Tips
-
-1. **Start from Notebook 0**: Begin with `00_first_qubit.ipynb` - even if you have some quantum knowledge
-2. **Run cells sequentially**: Each notebook is designed to be run from top to bottom
-3. **Use checkpoints**: Verify your understanding at each 🎯 CHECKPOINT before continuing
-4. **Try exercises**: Do the 🟢 exercises at minimum, challenge yourself with 🟡 and 🔴
-5. **Take quizzes**: Test yourself with end-of-notebook quizzes
-6. **Take your time**: Estimated times are guidelines - explore at your own pace!
-7. **Modify and experiment**: Change parameters, try different gates, see what happens!
-8. **Visual learner?**: Focus on the plots - they tell the story
-9. **Math curious?**: Read the equations and explanations for deeper understanding
-10. **Track progress**: Watch your ⬛⬛⬛⬜⬜⬜⬜ progress bar fill up!
-
----
-
-**Ready to explore the quantum world?** Start with `notebooks/00_first_qubit.ipynb` and enjoy the journey from zero to quantum hero! 🚀✨
